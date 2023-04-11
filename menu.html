@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(31, 34, 53)
+        }
+
+        /*Tilbage knappen*/
+        a {
+            color: white;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        nav{
+            width:100%; /*så de fylder hele siden*/
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:15pt;
+            display:flex; 
+            align-items:center;
+            flex-direction:column; /*så de kommer under hinanden*/
+            justify-content:center;
+        }
+        nav a{
+            text-decoration:none;
+            color:white;
+            padding-top:10px;
+            padding-bottom:10px;
+            border-bottom: 1px solid white; /*så de får streg under*/
+            width:100%;
+            display:flex;
+            justify-content:center;
+        }
+        nav a:hover{
+            font-size: x-large;
+            /*text-shadow:1px 1px 1px black;*/
+        }
+    </style>
+
+</head>
+<body>
+    <a href="indext.html">Tilbage</a>
+    <nav id="hovedmenu">
+        <a href="#">menupunkt 1</a>
+        <a href="#">menupunkt 2</a>
+        <a href="#">menupunkt 3</a>
+        <a href="#">menupunkt 4</a>
+        <a href="#">menupunkt 5</a>
+        <a href="#">menupunkt 6</a>
+    </nav>
+</body>
+</html>
