@@ -1,46 +1,43 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
 }
 
 header{
     width: 100%;
-    background-color: #1d213c;
     top:0;
-    padding: 2% 0%;
     z-index: 2;
-    position: absolute;
-}
-
-header nav{
-    display: flex;
-    justify-content: right;
-    gap: 20px;
-    padding-right: 10%;
+    position: fixed;
+    background-color: #fff0c8;
 }
 
 #laptopnav_top{
-    border-bottom: solid;
-    border-color: grey;
-    border-width: 1px;
-    padding-bottom: 20px;
+    display: flex;
+    justify-content: right;
 }
 
 #laptopnav_top a{
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: small;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: medium;
+    margin-right:50px;
+    padding-top:5%;
+    padding-bottom:3%;
     text-decoration: none;
 }
-#laptopnav_top a:hover{
-    color: rgb(223, 223, 223);
 
+#laptopnav_top a:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #laptopnav_bottom {
-    padding-top: 30px;
+    padding: 0.5% 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #997e5b;
+
 }
 
 #laptopnav_bottom a {
@@ -48,220 +45,193 @@ header nav{
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: white;
+    color: rgb(255, 255, 255);
 }
+
+#laptopnav_bottom #navleft a{
+    padding-left:50px;
+}
+
+#laptopnav_bottom #navright a{
+    padding-right:50px;
+}
+
 
 #laptopnav_bottom a:hover{
-    color: rgb(173, 173, 173);
+    cursor: pointer;
+
+    animation-name: navting;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
-#logo{
-    width: 135px;
-    height: 145px;
-    background-color: white;
-    border-radius: 20px;
-
-    position: absolute; /*så den bliver overpå nav*/
-    margin-top: 1%;
-    margin-left: 4.2%;
-
-    border-style: solid;
-    border-color: black;
-    z-index: 1;
+#navn img{
+    position: absolute;
+    left: 4%;
+    top: 10%;
+    width: 350px;
 }
 
+#logo img{
+    position: absolute;
+    width: 17%;
+    left: 41.5%;
+    top: 10%;
+    margin-bottom: 5%;
 
-
-
-body {
-    margin: 5%;
+    animation-name: logoting;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
 }
 
-main a{
-    background-color:grey;
-    border-radius:20px;
-    color:white;
-    padding:10px;
-    text-decoration:none;
-}
-
-img{
-    width: 100%;
-    border-radius: 10px;
-}
-
-main, .abonnement{
+.search-box {
     display: flex;
-}
-
-.abonnement{
+    justify-content: center;
     align-items: center;
-    padding: 20px
+    
+  }
+  
+  input[type="text"] {
+    margin-top: 23%;
+    width: 630px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid black;
+    outline: none;
+}
+@keyframes navting{
+    from{letter-spacing:0;}
+    to{letter-spacing:2px;}
 }
 
-.nyheder{
-    display: flex;
-    justify-content: space-around;
-    gap: 5px;
+@keyframes logoting{
+from{top:-250%;}
+to{top:10%;}
 }
 
-.nyheder > section{
-    width: 25%;
-    height: 350px;
-    margin: 10px;
-    padding: 20px;
-    /*padding: 1.5%;*/
-
-    background-color: cadetblue;
-    border-radius: 10px;
+.row .kort {
+    background-color: #997e5b;
 }
 
-.nyheder > section:hover{
-    opacity: 0.85;
-}
+@media only screen and (min-width: 1200px){
+    main{
+        float: center;
+        margin:10%
+    
+    }
 
-.nyheder > section:first-child{
-    width: 50%;
-    background-color: crimson;
-    background-image: url(images/udebane-top.webp);
-    background-size:cover;
-}
+    main h1{
+        margin-top: 6%;
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        margin-left:5px;
+    }
+    .row{
+        width: 100%;
+        height: 450px;
+        display:flex;
+        flex-direction: row;
+   
+    }
 
-#secondchild{
-    background-image: url(images/cecilie-johansen.webp);
-    background-size:cover;
-    background-position: center;
-}
+    .row .kort {
+        margin: 0.6%;
+        width: 45%;
+        height: 45%;
+        position:relative;
+    }
 
-#thirdchild{
-    background-image: url(images/paddy-jubel-tilskuer.webp);
-    background-size:cover;
-    background-position: center;
-}
+    #nyheder .kort:first-child {
+        height:100%;
+        position:block;
 
-h1 {
-    font-size: 30pt;
-}
+    }
 
-h2 {
-    color: white;
-    font-weight: 500;
-    font-stretch: expanded;
-}
+    #tilbud .kort:last-child {
+        height:100%;
 
-h4 {
-    padding-bottom: 15px;
-    font-weight: 500;
-    color: white;
-}
+    }
 
-h5 {
-    font-weight: 100;
-    color: white;
-}
+    #pop .kort:first-child {
+        height:100%;
 
+    }
 
-/*Kaspers media q*/
-@media only screen and (min-width: 1000px){    #mobilnav{
-    display: none;
-}
-}
-
-@media only screen and (max-width: 1000px){
-    header nav{
+    #mobilnav{
         display: none;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+
+    header #laptopnav_top{
+        display: none;
+    }
+
+    header #laptopnav_bottom{
+        display: none;
+    }
+    
+    h1{
+        margin:30px;
     }
 
     #mobilnav{
         display: block;
         display: flex;
-        justify-content: right;
-        padding-right: 2%;
-        border-width: 1px;
-        flex-direction: row;
+        justify-content: space-between;
     }
 
-    #mobilnav a {
-        gap: 20px;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        font-size: small;
+    #mobilnav a{
+        font-family: sans-serif;
+        color: rgb(0, 0, 0);
+        font-size: xx-large;
+        margin-right:50px;
+        margin-top:55px;
         text-decoration: none;
-        padding-top: 10px;
-        padding-right: 20px;
+    }
+
+    #navn{
+        display:none;
     }
 
     #mobilnav img{
-        width: 20px;
+        width: 90px;
+        margin-left:40px;
+        margin-top:-15px;
     }
-
-    #logo{
-        width: 55px;
-        height: 70px;
-        background-color: white;
-        border-radius: 5px;
-    
-        position: absolute; /*så den bliver overpå nav*/
-        margin-left: 2%;
-        top:0;
-    
-        border-style: solid;
-        border-color: black;
+   
+    main{
+    flex-direction: column;
+}
+    .row .kort{
+        width: 93%;
+        height: 400px;
+        margin: auto;
+        margin-top:2%;
     }
 }
 
-/*Niko*/
-
-@media screen and (max-width:768px){
-    #logopladsholder{
-        display: none; /*logoet forsvinder*/
-    }
-
-    #laptopnav_top, #laptopnav_bottom{
-        display: none;
-    }
-
-    #mobilnav { /* så mobil burgermenu kommer frem*/
-        display: block;
-        text-align: right;
-        color: white;
-        height: 50px;
-    }
-    
-    
-    main{
-        flex-direction: column;
-    }
-
-    .nyheder{
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .nyheder > section{
-        width: 90%;
-    }
-
-    .nyheder > section:first-child{
-        width: 90%;
-    }
+footer{
+    background-color: #fff0c8;
+    color: rgb(0, 0, 0);
+    height: 350px;
+    padding : 20px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-around; 
 }
 
-@media screen and (min-width:768px){
-    #logopladsholder{
-        display: block;
-    }
-    
-    #mobilnav { /* så mobil burgermenu kommer frem*/
-        display: none;
-    }
-    
-    main{
-        flex-direction: row;
-    }
-    
-    .abonnement{
-        width: 50%;
-    }
+.firekollonner{
+    display:flex;
+}
+
+ul{
+    list-style-type: none;
+    text-align: left;
+    margin: 10%;
 }
